@@ -2,26 +2,19 @@
 
 import { useForm } from "react-hook-form";
 import axios from "axios";
-import toast from "react-hot-toast";
 
 export default function Register() {
-  const { register, handleSubmit, reset } = useForm<any>();
+  const { register, handleSubmit } = useForm<any>();
 
   const onSubmit = async (data: any) => {
-    try {
-      await axios.post("/api/register", data);
-      toast.success("Berhasil daftar!");
-      reset();
-    } catch {
-      toast.error("Gagal!");
-    }
+    console.log(data);
   };
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-100">
       <form
         onSubmit={handleSubmit(onSubmit)}
-        className="bg-white p-6 rounded-xl w-96 shadow"
+        className="bg-white p-6 rounded-2xl w-96 shadow-xl"
       >
         <h2 className="text-xl font-bold mb-4">Form Pendaftaran</h2>
 
@@ -29,7 +22,7 @@ export default function Register() {
         <input {...register("kelas")} placeholder="Kelas" className="input" />
         <input {...register("wa")} placeholder="No WA" className="input" />
 
-        <button className="bg-blue-900 text-white w-full py-2 rounded-lg mt-4">
+        <button className="bg-blue-600 text-white w-full py-2 rounded-lg mt-4">
           Daftar
         </button>
       </form>
