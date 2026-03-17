@@ -4,7 +4,6 @@ export default function Home() {
   return (
     <main className="min-h-screen bg-black text-white flex items-center justify-center">
 
-      {/* Glow background */}
       <div className="absolute w-[500px] h-[500px] bg-blue-500 blur-[120px] opacity-20 rounded-full top-0 left-0"></div>
 
       <motion.div
@@ -12,7 +11,7 @@ export default function Home() {
         animate={{ opacity: 1, y: 0 }}
         className="text-center z-10"
       >
-        <h1 className="text-5xl md:text-7xl font-bold mb-4">
+        <h1 className="text-5xl font-bold mb-4">
           Misdinar St. Clara
         </h1>
 
@@ -22,7 +21,7 @@ export default function Home() {
 
         <a
           href="/register"
-          className="bg-yellow-400 text-black px-6 py-3 rounded-xl font-semibold hover:scale-105 transition"
+          className="bg-yellow-400 text-black px-6 py-3 rounded-xl"
         >
           Gabung Sekarang
         </a>
