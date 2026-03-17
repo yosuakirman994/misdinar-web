@@ -1,38 +1,33 @@
 "use client";
 
-import { useForm } from "react-hook-form";
-import axios from "axios";
-import toast from "react-hot-toast";
+import { motion } from "framer-motion";
 
-export default function Register() {
-  const { register, handleSubmit, reset } = useForm<any>();
-
-  const onSubmit = async (data: any) => {
-    try {
-      await axios.post("/api/register", data);
-      toast.success("Berhasil daftar!");
-      reset();
-    } catch {
-      toast.error("Gagal!");
-    }
-  };
-
+export default function Home() {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100">
-      <form
-        onSubmit={handleSubmit(onSubmit)}
-        className="bg-white p-6 rounded-xl w-96 shadow"
+    <main className="min-h-screen bg-black text-white flex items-center justify-center">
+
+      <div className="absolute w-[500px] h-[500px] bg-blue-500 blur-[120px] opacity-20 rounded-full top-0 left-0"></div>
+
+      <motion.div
+        initial={{ opacity: 0, y: 40 }}
+        animate={{ opacity: 1, y: 0 }}
+        className="text-center z-10"
       >
-        <h2 className="text-xl font-bold mb-4">Form Pendaftaran</h2>
+        <h1 className="text-5xl font-bold mb-4">
+          Misdinar St. Clara
+        </h1>
 
-        <input {...register("nama")} placeholder="Nama" className="input" />
-        <input {...register("kelas")} placeholder="Kelas" className="input" />
-        <input {...register("wa")} placeholder="No WA" className="input" />
+        <p className="mb-6 opacity-80">
+          Melayani dengan hati, bertumbuh dalam iman
+        </p>
 
-        <button className="bg-blue-900 text-white w-full py-2 rounded-lg mt-4">
-          Daftar
-        </button>
-      </form>
-    </div>
+        <a
+          href="/register"
+          className="bg-yellow-400 text-black px-6 py-3 rounded-xl"
+        >
+          Gabung Sekarang
+        </a>
+      </motion.div>
+    </main>
   );
 }
