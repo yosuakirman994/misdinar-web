@@ -30,11 +30,6 @@ export default function Home() {
         </a>
       </motion.div>
 
-       <div className="text-center p-20">
-          <p>🚧 Sedang Dalam Pengembangan</p>
-          <p>Mohon ditunggu ya 🙏</p>
-      </div>
-
 
     </main>
   );
