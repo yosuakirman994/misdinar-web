@@ -18,14 +18,15 @@ export default function Home() {
         </h1>
 
         <p className="mb-6 opacity-80">
-          Melayani dengan hati, bertumbuh dalam iman
+          Menjadikan Misdinar yang Berkarakter dan Bermutu dalam Mengimani Yesus Kristus
         </p>
 
         <a
-          href="/register"
-          className="bg-yellow-400 text-black px-6 py-3 rounded-xl"
+           href="https://absensi.misdinarstclara.my.id/login.php"
+           target="_blank"
+           className="bg-yellow-400 text-black px-6 py-3 rounded-xl"
         >
-          Gabung Sekarang
+           Absen Pertemuan
         </a>
       </motion.div>
     </main>
