@@ -15,6 +15,9 @@ const geistMono = Geist_Mono({
 export const metadata = {
   title: "Misdinar St. Clara",
   description: "Website resmi Misdinar St. Clara",
+  icons: {
+    icon: "/favicon.ico",
+  },
 };
 
 export default function RootLayout({
