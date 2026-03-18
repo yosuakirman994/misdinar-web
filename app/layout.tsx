@@ -12,7 +12,7 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-export const metadata = {
+export const metadata: Metadata = {
   title: "Misdinar St. Clara",
   description: "Website resmi Misdinar St. Clara",
   icons: {
@@ -22,15 +22,31 @@ export const metadata = {
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
     <html lang="en">
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+
+        {/* 🔥 NAVBAR */}
+        <nav className="bg-black text-white p-4 flex justify-between items-center">
+          <span className="font-bold">Misdinar</span>
+
+          <div className="space-x-4 text-sm">
+            <a href="/">Home</a>
+            <a href="/visi-misi">Visi Misi</a>
+            <a href="/susunan-pengurus">Pengurus</a>
+            <a href="/jadwal-misa">Jadwal Misa</a>
+            <a href="/berita">Berita</a>
+          </div>
+        </nav>
+
+        {/* 🔥 CONTENT */}
         {children}
+
       </body>
     </html>
   );
