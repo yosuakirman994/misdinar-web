@@ -33,13 +33,13 @@ export default function RootLayout({
 
         {/* 🔥 NAVBAR */}
         <nav className="bg-black text-white p-4 flex justify-between items-center">
-          <span className="font-bold">Misdinar</span>
+          <span className="font-bold">Misdinar Santa Clara</span>
 
           <div className="space-x-4 text-sm">
             <a href="/">Home</a>
             <a href="/visi-misi">Visi Misi</a>
-            <a href="/susunan-pengurus">Pengurus</a>
-            <a href="/jadwal-misa">Jadwal Misa</a>
+            <a href="/susunan-pengurus">Profil</a>
+            <a href="/jadwal-misa">Galeri</a>
             <a href="/berita">Berita</a>
           </div>
         </nav>
